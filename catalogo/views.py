@@ -34,7 +34,7 @@ def lista_bolos(request):
             Q(nome__icontains=query) | Q(sabor__icontains=query)
         )
 
-    paginator = Paginator(bolos, 5)
+    paginator = Paginator(bolos, 3)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
 
